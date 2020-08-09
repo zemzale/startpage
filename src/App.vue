@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <div>
-        <EntryList v-bind:entries="entries"/>
+        <EntryList 
+            v-bind:entries="entries"
+            v-bind:title="title"/>
     </div>
   </div>
 </template>
@@ -13,6 +15,7 @@ export default {
   name: 'App',
   data() {
     return {
+        title: "Media",
         entries: [
             {
                 name: 'reddit',
@@ -30,7 +33,7 @@ export default {
                 name: 'youtube',
                 url: 'https://www.youtube.com'
             }
-        ]
+        ],
     }
   },
   components: {
