@@ -1,11 +1,41 @@
 <template>
   <div id="app">
+    <div>
+        <EntryList v-bind:entries="entries"/>
+    </div>
   </div>
 </template>
 
 <script>
+import EntryList from './components/EntryList.vue'
+
 export default {
   name: 'App',
+  data() {
+    return {
+        entries: [
+            {
+                name: 'reddit',
+                url: 'https://reddit.com'
+            },
+            {
+                name: '/r/programming',
+                url: 'https://reddit.com/r/programming'
+            },
+            {
+                name: 'tvnet',
+                url: 'https://www.tvnet.lv'
+            },
+            {
+                name: 'youtube',
+                url: 'https://www.youtube.com'
+            }
+        ]
+    }
+  },
+  components: {
+    EntryList
+  }
 }
 </script>
 
