@@ -24,6 +24,20 @@ a {
     color: inherit;
 }
 
+input {
+    font-family: "Space Mono", monospace;
+    font-size: 20px;
+    width: 100%;
+    flex-shrink:0;
+    flex-grow: 1;
+    min-width: 370px;
+    height: 3em;
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text);
+    border: none;
+    padding: 0.2em 1em;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -34,7 +48,8 @@ a {
 }
 
 .row{
-    width: 1000px;
+    max-width: 1000px;
+    min-width: 300px;
     display: flex;
     flex-direction: row;
     justify-content: center;
