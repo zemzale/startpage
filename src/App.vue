@@ -77,6 +77,7 @@ ul {
 
 #app {
   font-family: Roboto Mono, monospace;
+  font-size: 20pt;
   text-align: center;
   color: #f1f1f1;
   margin-top: 60px;
