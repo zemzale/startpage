@@ -1,34 +1,53 @@
 <template>
     <div class="holder">
-        <div class="card">
-            <div class="card-header">
-                <span>Fun</span>
-            </div>
-            <div class="card-body">
-                <ul>
-                    <li><a href="https://reddit.com/r/programming">/r/programming</a></li>
-                    <li><a href="https://youtube.com">YouTube</a></li>
-                    <li><a href="https://netflix.com">Netflix</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <span>Code</span>
-            </div>
-            <div class="card-body">
-                <ul>
-                    <li><a href="https://github.com">GitHub</a></li>
-                    <li><a href="https://gitlab.com">GitLab</a></li>
-                </ul>
-            </div>
-        </div>
+        <Card v-for="cat in categories" :key="cat.title" :title="cat.title" :items="cat.items" />
     </div>
 </template>
 
 <script>
+import Card from '@/components/Card.vue';
+
 export default {
   name: 'App',
+  components: {
+    Card,
+  },
+  data() {
+    return {
+        categories: [
+            {
+                title: "Fun",
+                items: [
+                    {
+                        link: "https://reddit.com/r/programming",
+                        name: "/r/programming",
+                    },
+                    {
+                        link: "https://youtube.com",
+                        name: "YouTube",
+                    },
+                    {
+                        link: "https://netflix.com",
+                        name: "Netflix",
+                    }
+                ]
+            },
+            {
+                title: "Code",
+                items: [
+                    {
+                        link: "https://github.com",
+                        name: "GitHub",
+                    },
+                    {
+                        link: "https://gitlab.com",
+                        name: "GitLab",
+                    },
+                ]
+            }
+        ]
+    }
+  },
 }
 </script>
 
