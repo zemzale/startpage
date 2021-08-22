@@ -87,6 +87,13 @@ li:hover {
     background-color: #11e6be;
     text-decoration: none;
 }
+
+li:hover > a{
+    color: #121212;
+    background-color: #11e6be;
+    text-decoration: none;
+}
+
 ul {
     padding:0;
     margin:0;
