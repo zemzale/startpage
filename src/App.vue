@@ -71,7 +71,7 @@ export default {
     border-bottom: #11e6be solid 1px;
     padding-bottom: 2px;
 }
-body {
+body html {
     background-color: #121212;
 }
 a {
