@@ -1,24 +1,4 @@
-# startpage
+# Startpage
 
-## Project setup
-```
-yarn install
-```
+This is my simple pet project for a nice startpage for my browser
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
