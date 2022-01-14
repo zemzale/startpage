@@ -21,21 +21,21 @@ function App() {
   return (
     <div className="App">
         <div className="holder"> 
-            {categories.map(category => <Card category={category} />)}
+            {categories.map(category => <Card name={ category.name } links={ category.links } />)}
         </div>
     </div>
   )
 }
 
-const Card = ({ category }: Category) => {
+const Card = ({ name, links } : Category) => {
     return (
         <div className="card">
             <div className="card-header">
-                <span>{ category.name }</span>
+                <span>{ name }</span>
             </div>
             <div className="card-body">
                 <ul>
-                    { category.links.map((item: Link) => <a href={ item.url }><li>{ item.name }</li></a>)}
+                    { links.map((item: Link) => <a href={ item.url }><li>{ item.name }</li></a>)}
                 </ul>
             </div>
         </div>
