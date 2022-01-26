@@ -35,7 +35,7 @@ const Card = ({ name, links } : Category) => {
             </div>
             <div className="card-body">
                 <ul>
-                    { links.map((item: Link) => <a href={ item.url }><li>{ item.name }</li></a>)}
+                    { links.map((item: Link, i: number) => <a key={ i } href={ item.url }><li>{ item.name }</li></a>)}
                 </ul>
             </div>
         </div>
