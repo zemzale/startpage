@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
         <div className="holder"> 
-            {categories.map(category => <Card name={ category.name } links={ category.links } />)}
+            {categories.map((category: Category, i: number) => <Card key={ i } name={ category.name } links={ category.links } />)}
         </div>
     </div>
   )
